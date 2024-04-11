@@ -54,20 +54,8 @@ Therefore, our state equation comes out to
 
 $\vec{x}' = \begin{bmatrix}x' \\ y'\end{bmatrix} $
 
-$x' = 
-\begin{cases}
-x_1' + x_2' \text{  if  } c_1\land c_2\\
-x_1' \text{  if  } c_1\\ 
-x_2' \text{  if  } c_2\\
-0 \text{  else  }
-\end{cases}
-y' = 
-\begin{cases}
-y_1' + y_2' \text{  if  } c_1\land c_2\\
-y_1' \text{  if  } c_1\\ 
-y_2' \text{  if  } c_2\\
--\alpha_2 \text{  else  }
-\end{cases}$
+$x' = \begin{cases}x_1' + x_2' \text{  if  } c_1\land c_2\\x_1' \text{  if  } c_1\\ x_2' \text{  if  } c_2\\0 \text{  else  }\end{cases}$
+$y' = \begin{cases}y_1' + y_2' \text{  if  } c_1\land c_2\\y_1' \text{  if  } c_1\\ y_2' \text{  if  } c_2\\-\alpha_2 \text{  else  }\end{cases}$
 
 #### Model Parameters and Equations
 
