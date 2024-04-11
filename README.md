@@ -24,12 +24,20 @@ To model the robot's movement, we are treating the legs as double pendulums whil
 
 Our model tries to minimize the amount the legs move, and the time spent moving for $\vec{x}$ to reach a final state. We constrain our control to possible angles similar to the standard human range of motion: 
 
-$-10\degree \leq \theta_i \leq 90\degree \\
--90\degree + \theta_i \leq \phi_i \leq 0\degree + \theta_i$
-
+$-10\degree \leq \theta_i \leq 90\degree$
+$-90\degree + \theta_i \leq \phi_i \leq 0\degree + \theta_i$
 
 ##### In the interest of generating a problem we can solve, we decide to abstract it from real world physics, seeing if we can encourage similar behavior mathematically. In other words, we do not consider things such as friction or mass but instead have rules such as the foot being on the ground fixes it in place or neither foot on the ground causes a negative velocity in the y direction.
 
+Given the constraints in the previous section, we have devised the following cost functional, with our desired final position as $y^*$.
+
+$$\int_0^{t_f}(\alpha_3 u_1)^2 + (\alpha_3 u_2)^2 + (\alpha_4 u_3)^2 + (\alpha_4 u_4)^2 + (\alpha(y - y^*)^4 dt.$$
+
+Since our control is defined on a compact set one might think the optimal control would end up being bang-bang but at any discrete timestep we want to avoid extreme motion in the legs. To achieve this we normalize the control by the desired maximum amount of motion at a timestep (such as 5 degrees of change from one frame to another) and then square this term leading to the $(\alpha_3 u_1)^2$ and similar terms in the cost function.
+
+<p align="center">
+  <img src="mediafolder/CostFig.png" alt="Stick Fig" width="400"/>
+</p>
 
 #### Model Parameters and Equations
 
