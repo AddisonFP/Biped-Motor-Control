@@ -133,6 +133,18 @@ As seen above we did not get the results we were hoping for. We struggled with n
   <img src="mediafolder/badstand2.gif" alt="Stick Fig" width="400"/><img src="mediafolder/Figure_2.png" alt="Stick Fig" width="400"/>
 </p>
 
+While the syncronization between the two gifs may be off they are important because each one was solved with a different ODE.  One was solved using the bang-bang solution for the derivatives and the analytical solution for the rest of the control as seen above, the second one was solved by solving for the control using the ODEs found above.  This is important as it suggests a few things.  First it suggests that the analytical solutions and bang-bang switching times found are correct since a numerical solver gave the same control (see the plots of the control to the right).  Secondly it suggests that our stable code implementation probably doesn't have too much wrong with it and the resons we are not getting results is a problem with our state or cost functional we chose.  While this is disappointing it does at least define what is wrong and what could be fixed in future models.
+
+
+<p align="center">
+  <img src="mediafolder/yoga.gif" alt="Stick Fig" width="400"/><img src="mediafolder/controls(yoga).png" alt="Stick Fig" width="400"/>
+</p>
+<p align="center">
+  <img src="mediafolder/kneelskinda.gif" alt="Stick Fig" width="400"/><img src="mediafolder/controls(kneelskinda).png" alt="Stick Fig" width="400"/>
+</p>
+
+The above two figures tell us more about some issues we might be having.  The top figure where our stick figure starts hot yoga demonstrates that depending on the conditions the inequality strengths are not costly enough to be inforced.  In the lower figure the stick figure finds some floating equilibrium where it's not standing on 0 as we desire but lower this suggests that the state is not evolving properly in the y direction, the velocity in y is somehow negative even though the conditions for the feet to be on the ground are cleared.
+
 ## Analysis
 
 Due to the complicated nature of the problem, our model currently does not produce the desired result when applied via Python. A major problem is defining the evolution of the control when the foot is not on the ground.
