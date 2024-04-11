@@ -31,7 +31,7 @@ $-90\degree + \theta_i \leq \phi_i \leq 0\degree + \theta_i$
 
 Given the constraints in the previous section, we have devised the following cost functional, with our desired final position as $y^*$.
 
-$$\int_0^{t_f}(\alpha_3 u_1)^2 + (\alpha_3 u_2)^2 + (\alpha_4 u_3)^2 + (\alpha_4 u_4)^2 + (\alpha(y - y^*)^4 dt.$$
+$$\int_0^{t_f}(\alpha_3 u_1)^2 + (\alpha_3 u_2)^2 + (\alpha_4 u_3)^2 + (\alpha_4 u_4)^2 + (\alpha(y - y^*)^4 dt$$
 
 Since our control is defined on a compact set one might think the optimal control would end up being bang-bang but at any discrete timestep we want to avoid extreme motion in the legs. To achieve this we normalize the control by the desired maximum amount of motion at a timestep (such as 5 degrees of change from one frame to another) and then square this term leading to the $(\alpha_3 u_1)^2$ and similar terms in the cost function.
 
@@ -48,7 +48,7 @@ This comes from finding the position of the top point of a single double pendulu
 
 Then define the following condition:
 
-$c_i = y - (l_1\cos(\theta_i) + l_2\cos(\phi_i)) \leq 0.$$
+$c_i = y - (l_1\cos(\theta_i) + l_2\cos(\phi_i)) \leq 0$
 
 This condition is supposed to tell use whether or not a foot (end of a double pendulum) is on the ground ($y=0$). Therefore, our state equation comes out to
 
