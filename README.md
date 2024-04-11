@@ -19,15 +19,15 @@ We attempt at modelling how to move a biped across terrain. Given a point of con
 ## Modeling
 
 ### Initial Modelling
-\large
+
 To model the robot's movement, we are treating the legs as double pendulums while in air but inverted double pendulums while on the ground. A $\theta$ parameter represents the angles of the "thigh" pendulums, and a $\phi$ parameter represents the angle of the "calf" pendulums. Our state $\vec{x}$, represents the position of the top of the legs where they connect (see figure above).
 
 Our model tries to minimize the amount the legs move, and the time spent moving for $\vec{x}$ to reach a final state. We constrain our control to possible angles similar to the standard human range of motion: 
-$$
-\begin{align*}
+
+$\begin{align*}
 -10\degree \leq \theta_i \leq 90\degree \\
 -90\degree + \theta_i \leq \phi_i \leq 0\degree + \theta_i
-\end{align*}$$
+\end{align*}$
 
 
 ##### In the interest of generating a problem we can solve, we decide to abstract it from real world physics, seeing if we can encourage similar behavior mathematically. In other words, we do not consider things such as friction or mass but instead have rules such as the foot being on the ground fixes it in place or neither foot on the ground causes a negative velocity in the y direction.
