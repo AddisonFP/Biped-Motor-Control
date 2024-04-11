@@ -68,6 +68,12 @@ $- \mu_1(\phi_1 - \theta_1) - \mu_2(-\frac{\pi}{2} + \theta_1 - \phi_1) - \mu_3(
 
 $- \mu_5(\phi_2 - \theta_2) - \mu_6(-\frac{\pi}{2} + \theta_2 - \phi_2) - \mu_7(-\frac{\pi}{18} - \theta_2) - \mu_8(-\frac{\pi}{2} + \theta_2),$
 
+This then gives us the costate evolution of:
+
+$\vec{p'} = [-\frac{DL}{Dx},  -\frac{DL}{Dy}]= [0, 4(x_1(y-y^*)^3]$
+
+$\vec{p'}(t_f) = -\frac{\Delta\phi}{\Delta\vec{x}(t_f)} = \vec{0}$
+
 #### Model Parameters and Equations
 
 The parameters and equations governing motion in this updated model are listed in the table below.
