@@ -75,15 +75,20 @@ $\vec{p'} = [-\frac{DL}{Dx},  -\frac{DL}{Dy}]= [0, 4(x_1(y-y^*)^3]$
 
 $\vec{p'}(t_f) = -\frac{\Delta\phi}{\Delta\vec{x}(t_f)} = \vec{0}$
 
-From $\frac{D\mathscr{L}}{D\vec{u}} = \vec{0}$ we get the following ODEs
+From $\frac{D\mathscr{L}}{D\vec{u}} = \vec{0}$ we get the following bang-bang solutions and analytical solutions:
 
-$\tilde{\theta}_1' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\theta_1) + p_2(\ell_2\sin\theta_1) < 0;\tab -1, \text{if } p_1(\ell_1 \cos\theta_1) + p_2(\ell_2\sin\theta_1) > 0,\]$
+$\tilde{\theta}_1' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\theta_1) + p_2(\ell_2\sin\theta_1) < 0; -1, \text{if } p_1(\ell_1 \cos\theta_1) + p_2(\ell_2\sin\theta_1) > 0,\]$
 
-$\tilde{\theta}_2' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\theta_2) + p_2(\ell_2\sin\theta_2) < 0;\tab -1, \text{if } p_1(\ell_1 \cos\theta_2) + p_2(\ell_2\sin\theta_2) > 0,\]$
+$\tilde{\theta}_2' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\theta_2) + p_2(\ell_2\sin\theta_2) < 0; -1, \text{if } p_1(\ell_1 \cos\theta_2) + p_2(\ell_2\sin\theta_2) > 0,\]$
 
-$\tilde{\phi}_1' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\phi_1) + p_2(\ell_2\sin\phi_1) < 0;\tab -1, \text{if } p_1(\ell_1 \cos\phi_1) + p_2(\ell_2\sin\phi_1) > 0,\]$
+$\tilde{\phi}_1' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\phi_1) + p_2(\ell_2\sin\phi_1) < 0; -1, \text{if } p_1(\ell_1 \cos\phi_1) + p_2(\ell_2\sin\phi_1) > 0,\]$
 
-$\tilde{\phi}_2' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) < 0;\tab -1, \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) > 0,\]$
+$\tilde{\phi}_2' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) < 0; -1, \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) > 0,\]$
+
+$\tilde{\phi}_2' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) < 0; -1, \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) > 0,\]$
+
+
+
 
 #### Model Parameters and Equations
 
