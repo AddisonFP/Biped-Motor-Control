@@ -52,10 +52,10 @@ $c_i = y - (l_1\cos(\theta_i) + l_2\cos(\phi_i)) \leq 0.$$
 
 Therefore, our state equation comes out to
 
-$\vec{x}' = \begin{bmatrix}x' \\ y'\end{bmatrix} $
+$\vec{x}' = [x' y'] $
 
-$x' = \Bigg \{ x_1' + x_2' \text{  if  } c_1\land c_2\\x_1' \text{  if  } c_1\\ x_2' \text{  if  } c_2\\0 \text{  else  }$
-$y' = y_1' + y_2' \text{  if  } c_1\land c_2\\y_1' \text{  if  } c_1\\ y_2' \text{  if  } c_2\\-\alpha_2 \text{  else  }$
+$x' =  {x_1' + x_2' if c_1 and c_2; x_1' if c_1; x_2' if c_2; 0 otherwise}$
+$y' = {y_1' + y_2' if c_1 and c_2; y_1' if c_1; y_2' if c_2; -\alpha_2 otherwise}$
 
 #### Model Parameters and Equations
 
