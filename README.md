@@ -6,7 +6,7 @@ Optimal Control System for Motor Control of a Bipedal Robot
 </p>
 
 
-# Flight of the Bumblebees: An Attraction-based Simulation
+# Death on Two Legs, an Optimal Control Simulation
 
 **Authors:** A. Powell, J. Smith, T. Christensen, W. Lewis
 
