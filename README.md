@@ -124,6 +124,14 @@ The parameters and equations governing motion in this updated model are listed i
 <p align="center">
   <img src="mediafolder/kneels.gif" alt="Stick Fig" width="400"/><img src="mediafolder/instability.gif" alt="Stick Fig" width="400"/>
 </p>
+As seen above we did not get the results we were hoping for. We struggled with numerical instability and overflow represented on the right gif above.  We also had a hard time motivating movement in the y-axis as shown by the figure on the left.  The model went through many iteration before we found a stable one. In order to get rid of overflow we use a logarithm to split some divisions and then exponentiated the results.  This worked suprising well and we started to see smooth/understandable results.  Unfortunately in all of our experiments to try to get it to stand and walk we did not succeed as for why we will elaborate further in the analysis section.  Note the next two figures:
+
+<p align="center">
+  <img src="mediafolder/badstand.gif" alt="Stick Fig" width="400"/><img src="mediafolder/Figure_1.png" alt="Stick Fig" width="400"/>
+</p>
+<p align="center">
+  <img src="mediafolder/badstand2.gif" alt="Stick Fig" width="400"/><img src="mediafolder/Figure_2.png" alt="Stick Fig" width="400"/>
+</p>
 
 ## Analysis
 
