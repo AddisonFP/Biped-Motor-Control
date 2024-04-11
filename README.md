@@ -41,8 +41,8 @@ Since our control is defined on a compact set one might think the optimal contro
 
 We then call the following our state:
 
-$x_i' &= l_2(\phi_i')\cos\phi_i + l1(\theta_i')\cos\theta_i$
-$y_i' &= l_2(\phi_i')\sin\phi_i + l_1(\theta_i')\sin\theta_i$
+$x_i' = l_2(\phi_i')\cos\phi_i + l1(\theta_i')\cos\theta_i$
+$y_i' = l_2(\phi_i')\sin\phi_i + l_1(\theta_i')\sin\theta_i$
 
 This comes from finding the position of the top point of a single double pendulum and then taking the derivative with respect to time to try and find the force it exerts on the point $\vec{x}$. Also note the derivative terms, we handle these by adding them to our control, making it 8-dimensional. 
 
@@ -54,8 +54,8 @@ Therefore, our state equation comes out to
 
 $\vec{x}' = \begin{bmatrix}x' \\ y'\end{bmatrix} $
 
-$x' = \begin{cases}x_1' + x_2' \text{  if  } c_1\land c_2\\x_1' \text{  if  } c_1\\ x_2' \text{  if  } c_2\\0 \text{  else  }\end{cases}$
-$y' = \begin{cases}y_1' + y_2' \text{  if  } c_1\land c_2\\y_1' \text{  if  } c_1\\ y_2' \text{  if  } c_2\\-\alpha_2 \text{  else  }\end{cases}$
+$x' = x_1' + x_2' \text{  if  } c_1\land c_2\\x_1' \text{  if  } c_1\\ x_2' \text{  if  } c_2\\0 \text{  else  }$
+$y' = y_1' + y_2' \text{  if  } c_1\land c_2\\y_1' \text{  if  } c_1\\ y_2' \text{  if  } c_2\\-\alpha_2 \text{  else  }$
 
 #### Model Parameters and Equations
 
