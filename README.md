@@ -12,7 +12,7 @@ Optimal Control System for Motor Control of a Bipedal Robot
 
 ## Abstract
 
-We attempt at modelling how to move a biped across terrain. Given a point of connection and 2 legs acting as double-pendulums, we try to minimize the distance between the robots final state and a given point using the angles of each leg as control.
+We attempt at modelling how to move a biped across a flat surface. Given a point of connection and 2 legs acting as double-pendulums, we try to minimize the distance between the robots final state and a given point (desired destination) using the angles of each leg as control.
 
 <!--## Background/Motivation  optional do later-->
 
@@ -27,7 +27,7 @@ Our model tries to minimize the amount the legs move, and the time spent moving 
 $-10\degree \leq \theta_i \leq 90\degree$
 $-90\degree + \theta_i \leq \phi_i \leq 0\degree + \theta_i$
 
-##### In the interest of generating a problem we can solve, we decide to abstract it from real world physics, seeing if we can encourage similar behavior mathematically. In other words, we do not consider things such as friction or mass but instead have rules such as the foot being on the ground fixes it in place or neither foot on the ground causes a negative velocity in the y direction.
+##### In the interest of generating a problem we can solve, we decide to abstract it from real world physics, seeing if we can encourage similar behavior mathematically. In other words, we do not consider things such as friction or mass but instead have rules such as the foot being on the ground should fix it in place or neither foot on the ground causes a negative velocity in the y direction.
 
 Given the constraints in the previous section, we have devised the following cost functional, with our desired final position as $y^*$.
 
@@ -142,7 +142,7 @@ While the syncronization between the two gifs may be off they are important beca
   <img src="mediafolder/kneelskinda.gif" alt="Stick Fig" width="400"/><img src="mediafolder/controls(kneelskinda).png" alt="Stick Fig" width="400"/>
 </p>
 
-The above two figures tell us more about some issues we might be having.  The top figure where our stick figure starts hot yoga demonstrates that depending on the conditions the inequality strengths are not costly enough to be inforced.  In the lower figure the stick figure finds some floating equilibrium where it's not standing on 0 as we desire but lower this suggests that the state is not evolving properly in the y direction, the velocity in y is somehow negative even though the conditions for the feet to be on the ground are cleared.
+The above two figures tell us more about some issues we might be having.  The top figure where our stick figure starts hot yoga demonstrates that depending on the conditions the inequality strengths are not costly enough to be enforced.  In the lower figure the stick figure finds some floating equilibrium where it's not standing on 0 as we desire but lower this suggests that the state is not evolving properly in the y direction, the velocity in y is somehow negative even though the conditions for the feet to be on the ground are cleared.
 
 ## Analysis
 
