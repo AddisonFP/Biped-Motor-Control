@@ -2,7 +2,7 @@
 Optimal Control System for Motor Control of a Bipedal Robot
 
 <p align="center">
-  <img src="media/bee_flights.gif" alt="Bee Flights" width="600"/>
+  <img src="mediafolder/jaadlity.png" alt="Stick Fig" width="600"/>
 </p>
 
 
@@ -14,14 +14,13 @@ Optimal Control System for Motor Control of a Bipedal Robot
 
 We attempt at modelling how to move a biped across terrain. Given a point of connection and 2 legs acting as double-pendulums, we try to minimize the distance between the robots final state and a given point using the angles of each leg as control.
 
-<!## Background/Motivation
-
-optional do later>
+<!## Background/Motivation  optional do later>
 
 ## Modeling
 
+### Initial Modelling
 \large
-To model the robot's movement, we are treating the legs as double pendulums while in air but inverted double pendulums while on the ground. A $\theta$ parameter represents the angles of the "thigh" pendulums, and a $\phi$ parameter represents the angle of the "calf" pendulums. Our state $\Vec{x}$, represents the position of the top of the legs where they connect.
+To model the robot's movement, we are treating the legs as double pendulums while in air but inverted double pendulums while on the ground. A $\theta$ parameter represents the angles of the "thigh" pendulums, and a $\phi$ parameter represents the angle of the "calf" pendulums. Our state $\vec{x}$, represents the position of the top of the legs where they connect.
 
 \begin{center}
   \captionsetup{type=figure}\addtocounter{figure}{-1}
