@@ -88,19 +88,19 @@ $\tilde{\phi}_2' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\el
 $\tilde{\phi}_2' = \alpha_3\dot\[1,  \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) < 0; -1, \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) > 0,\]$
 
 <p align="center">
-  <img src="mediafolder/tex1.png" alt="" width="400"/>
-  <img src="mediafolder/tex2.png" alt="" width="400"/>
-  <img src="mediafolder/tex4.png" alt="" width="400"/>
-  <img src="mediafolder/tex3.png" alt="" width="400"/>
+  <img src="mediafolder/tex1.png" alt="" width="500"/>
+  <img src="mediafolder/tex2.png" alt="" width="500"/>
+  <img src="mediafolder/tex4.png" alt="" width="500"/>
+  <img src="mediafolder/tex3.png" alt="" width="500"/>
 </p>
 
 We can also use this equation to get ODEs for the derivative terms:
 
 <p align="center">
-  <img src="mediafolder/ode1.png" alt="" width="400"/>
-  <img src="mediafolder/ode2.png" alt="" width="400"/>
-  <img src="mediafolder/ode4.png" alt="" width="400"/>
-  <img src="mediafolder/ode3.png" alt="" width="400"/>
+  <img src="mediafolder/ode1.png" alt="" width="500"/>
+  <img src="mediafolder/ode2.png" alt="" width="500"/>
+  <img src="mediafolder/ode4.png" alt="" width="500"/>
+  <img src="mediafolder/ode3.png" alt="" width="500"/>
 </p>
 
 
