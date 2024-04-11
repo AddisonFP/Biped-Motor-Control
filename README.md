@@ -50,7 +50,7 @@ Then define the following condition:
 
 $c_i = y - (l_1\cos(\theta_i) + l_2\cos(\phi_i)) \leq 0.$$
 
-Therefore, our state equation comes out to
+This condition is supposed to tell use whether or not a foot (end of a double pendulum) is on the ground ($y=0$). Therefore, our state equation comes out to
 
 $\vec{x}' = [x' y'] $
 
@@ -58,8 +58,9 @@ $x' =$ $x_1' + x_2'$ if $c_1$ and $c_2$; $x_1'$ if $c_1$; $x_2'$ if $c_2$; $0$ o
 
 $y' =$ $y_1' + y_2'$ if $c_1$ and $c_2$; $y_1'$ if $c_1$; $y_2'$ if $c_2$; $-\alpha_2$ otherwise
 
-### Deriving a system of ODE's to solve
+### Deriving a system of ODEs to solve
 
+First note that because of the presence of $$
 Using pontyagrins' maximum principle modified with KKT conditions for our inequality constraings we get the following modified lagrangian:
 
 $\mathscr{L} = p_1\cdot x' + p_2\cdot y' - (\alpha_3 u_1)^2 - (\alpha_3 u_2)^2 - (\alpha_4 u_3)^2 - (\alpha_4 u_4)^2 - (\alpha(y - y^*)^4$
@@ -73,6 +74,25 @@ This then gives us the costate evolution of:
 $\vec{p'} = [-\frac{DL}{Dx},  -\frac{DL}{Dy}]= [0, 4(x_1(y-y^*)^3]$
 
 $\vec{p'}(t_f) = -\frac{\Delta\phi}{\Delta\vec{x}(t_f)} = \vec{0}$
+
+From $\frac{D\mathscr{L}}{D\vec{u}} = \vec{0}$ we get the following ODEs
+
+$\[\tilde{\theta}_1' = \alpha_3    1,  \text{if } p_1(\ell_1 \cos\theta_1) + p_2(\ell_2\sin\theta_1) < 0\\   -1,  \text{if } p_1(\ell_1 \cos\theta_1) + p_2(\ell_2\sin\theta_1) > 0,\]$
+
+\[\tilde{\theta}_2' = \alpha_3 \begin{cases}
+    1, & \text{if } p_1(\ell_1 \cos\theta_2) + p_2(\ell_2\sin\theta_2) < 0 \\
+    -1, & \text{if } p_1(\ell_1 \cos\theta_2) + p_2(\ell_2\sin\theta_2) > 0,
+\end{cases}\]
+
+\[\tilde{\phi}_1' = \alpha_4 \begin{cases}
+    1, & \text{if } p_1(\ell_1 \cos\phi_1) + p_2(\ell_2\sin\phi_1) < 0 \\
+    -1, & \text{if } p_1(\ell_1 \cos\phi_1) + p_2(\ell_2\sin\phi_1) > 0,
+\end{cases}\]
+
+\[\tilde{\phi}_2' = \alpha_4 \begin{cases}
+    1, & \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) < 0 \\
+    -1, & \text{if } p_1(\ell_1 \cos\phi_2) + p_2(\ell_2\sin\phi_2) > 0.
+\end{cases}\]
 
 #### Model Parameters and Equations
 
