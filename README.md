@@ -121,7 +121,9 @@ The parameters and equations governing motion in this updated model are listed i
 
 ## Results
 
-
+<p align="center">
+  <img src="mediafolder/kneels.gif" alt="Stick Fig" width="400"/><img src="mediafolder/instability.gif" alt="Stick Fig" width="400"/>
+</p>
 
 ## Analysis
 
