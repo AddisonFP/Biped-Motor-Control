@@ -2,7 +2,7 @@
 Optimal Control System for Motor Control of a Bipedal Robot
 
 <p align="center">
-  <img src="mediafolder/jaadlity.png" alt="Stick Fig" width="600"/>
+  <img src="mediafolder/jaadlity.png" alt="Stick Fig" width="400"/>
 </p>
 
 
@@ -14,22 +14,15 @@ Optimal Control System for Motor Control of a Bipedal Robot
 
 We attempt at modelling how to move a biped across terrain. Given a point of connection and 2 legs acting as double-pendulums, we try to minimize the distance between the robots final state and a given point using the angles of each leg as control.
 
-<!## Background/Motivation  optional do later>
+<!--## Background/Motivation  optional do later-->
 
 ## Modeling
 
 ### Initial Modelling
 \large
-To model the robot's movement, we are treating the legs as double pendulums while in air but inverted double pendulums while on the ground. A $\theta$ parameter represents the angles of the "thigh" pendulums, and a $\phi$ parameter represents the angle of the "calf" pendulums. Our state $\vec{x}$, represents the position of the top of the legs where they connect.
+To model the robot's movement, we are treating the legs as double pendulums while in air but inverted double pendulums while on the ground. A $\theta$ parameter represents the angles of the "thigh" pendulums, and a $\phi$ parameter represents the angle of the "calf" pendulums. Our state $\vec{x}$, represents the position of the top of the legs where they connect (see figure above).
 
-\begin{center}
-  \captionsetup{type=figure}\addtocounter{figure}{-1}
-  \includegraphics[width=0.4\linewidth]{jaadlity.png}
-  \captionof{figure}{A figure of the system that represents the robot}
-  \label{fig:robot}
-\end{center} 
-
-Our model tries to minimize the amount the legs move, and the time spent moving for $\Vec{x}$ to reach a final state. We are also constraining the possible angles the legs can bend to keep them similar to the standard human range of motion: 
+Our model tries to minimize the amount the legs move, and the time spent moving for $\vec{x}$ to reach a final state. We constrain our control to possible angles similar to the standard human range of motion: 
 
 \begin{align*}
 -10\degree \leq \theta_i \leq 90\degree \\
