@@ -63,7 +63,9 @@ $y' =$ $y_1' + y_2'$ if $c_1$ and $c_2$; $y_1'$ if $c_1$; $y_2'$ if $c_2$; $-\al
 Using pontyagrins' maximum principle modified with KKT conditions for our inequality constraings we get the following modified lagrangian:
 
 $\mathscr{L} = p_1\cdot x' + p_2\cdot y' - (\alpha_3 u_1)^2 - (\alpha_3 u_2)^2 - (\alpha_4 u_3)^2 - (\alpha_4 u_4)^2 - (\alpha(y - y^*)^4$
+
 $- \mu_1(\phi_1 - \theta_1) - \mu_2(-\frac{\pi}{2} + \theta_1 - \phi_1) - \mu_3(-\frac{\pi}{18} - \theta_1) - \mu_4(-\frac{\pi}{2} + \theta_1)$
+
 $- \mu_5(\phi_2 - \theta_2) - \mu_6(-\frac{\pi}{2} + \theta_2 - \phi_2) - \mu_7(-\frac{\pi}{18} - \theta_2) - \mu_8(-\frac{\pi}{2} + \theta_2),$
 
 #### Model Parameters and Equations
