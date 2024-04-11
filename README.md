@@ -54,8 +54,8 @@ Therefore, our state equation comes out to
 
 $\vec{x}' = [x' y'] $
 
-$x' =  {x_1' + x_2' if c_1 and c_2; x_1' if c_1; x_2' if c_2; 0 otherwise}$
-$y' = {y_1' + y_2' if c_1 and c_2; y_1' if c_1; y_2' if c_2; -\alpha_2 otherwise}$
+$x' =$  {$x_1' + x_2'$ if $c_1$ and $c_2$; $x_1'$ if $c_1$; $x_2'$ if $c_2$; $0$ otherwise}
+$y' =$ {$y_1' + y_2'$ if $c_1$ and $c_2$; $y_1'$ if $c_1$; $y_2'$ if $c_2$; $-\alpha_2$ otherwise}
 
 #### Model Parameters and Equations
 
