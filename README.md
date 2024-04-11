@@ -103,35 +103,33 @@ We can also use this equation to get ODEs for the derivative terms:
   <img src="mediafolder/ode3.png" alt="" width="500"/>
 </p>
 
+### Code implementation and solution
+
+We used scipy.integrate's solve_bvp function to solve these optimal control porblems in python. please see JaAdLiTy.py for the code.
 
 #### Model Parameters and Equations
 
 The parameters and equations governing motion in this updated model are listed in the table below.
 
-| Parameter | Description |
-|-----------|-------------|
-| $h \in \mathbb{R}^{2}$ | Hive position |
-| $f_i \in \mathbb{R}^{2}$ | Attractor position (flower) $i \in \{1,\ldots,n \}$ |
-| $p_k \in \mathbb{R}^{L}$ | Preference vector of agent k $\in \{1,\ldots,K \}$ |
-| $q_i \in \mathbb{R}^{L}$ | Preference vector of attractor $i$ |
-| $\alpha$ | Vision distance |
-| $b$ | Minimum baseline attraction |
-| $T_i$ | Nectar value (time at attractor) |
-| $V$ | Max speed |
-| $\xi$ | Flight acceleration factor |
-
+| Parameter | Description | Tested Values |
+|-----------|-------------------------|----------------|
+| $\alpha_1$ | Height Constraint on the state | 2, 5, 10 |
+| $\alpha_2$ | Freefall velocity ~mg | 9.81 |
+| $\alpha_3$ | Penalty for thigh movement | $\frac{180}{5\pi}$ |
+| $\alpha_3$ | Penalty for calf movement | $\frac{180}{5\pi}-\frac{180}{10\pi}$ |
+| $\beta$ | Linearization for cosine | $0.63598-0.67561$ |
 
 ## Results
+
+
+
+## Analysis
 
 Due to the complicated nature of the problem, our model currently does not produce the desired result when applied via Python. A major problem is defining the evolution of the control when the foot is not on the ground.
 
 With continual improvements to one of the many parameters of the problem, we foresee success with this project. For example, one improvement that we can make to this is changing the ODE that was derived from the cost functions and state equations by making minor changes to the behavior of the cost function or state. Another improvement would be to solve for one step and then feed the final conditions of taking one step into the initial conditions of the next step, thereby discretizing the walk.
 
 From now, our current plan is to iterate on the equations we derived and continually update the code until we determine the optimal control for the bipedal robot. Given we can solve this issue, it can be the basis for more exciting and complicated problems in the future such as different terrain or changing parameters and costs to encourage/allow jumping.
-
-| Grid Size | $\alpha$ | $b$   | $T_i$ | $V$  | $\xi$ |
-|-----------|----------|-------|-------|------|-------|
-| 100       | 0.005    | 0.01  | 3     | 500  | 0.02  |
 
 
 #### Learning and Future Directions
